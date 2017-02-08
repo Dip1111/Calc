@@ -78,4 +78,40 @@ public class MainActivity extends AppCompatActivity {
             chosenTextView = true;
         }
     }
+
+    public int operationResult (String firstNumber,String secondNumber, String operation){
+        int first = Integer.valueOf(firstNumber);
+        int second = Integer.valueOf(secondNumber);
+        int result = 0;
+        final String ADD_SYMBOL = "+";
+        final String MIN_SYMBOL = "-";
+        final String DIV_SYMBOL = "/";
+        final String MUL_SYMBOL = "*";
+
+        switch (operation){
+            case ADD_SYMBOL:
+                result = first + second;
+                break;
+            case MIN_SYMBOL:
+                result = first - second;
+                break;
+            case DIV_SYMBOL:
+                result = first / second;
+                break;
+            case MUL_SYMBOL:
+                result = first * second;
+                break;
+        }
+        return result;
+    }
+
+    public void onClickYaIndys(View view) {
+        int result = operationResult(mFirstNumberTv.getText().toString(),
+                mSecondNumberTv.getText().toString(),mOperationTv.getText().toString());
+        mFirstNumberTv.setText(String.valueOf(result));
+        mSecondNumberTv.setText("");
+        mOperationTv.setText("");
+        chosenTextView = false;
+
+    }
 }
