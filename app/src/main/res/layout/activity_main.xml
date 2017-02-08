@@ -15,23 +15,23 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text=""
             android:id="@+id/first_number_tv"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello!"
+            android:text=""
             android:id="@+id/operation_tv"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
+            android:text=""
             android:id="@+id/second_number_tv"/>
 
     </LinearLayout>
-f
+
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -43,26 +43,27 @@ f
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:id="@+id/button7"
-            android:text="@string/button7"/>
+            android:text="@string/button7"
+            android:onClick="onClickNumber"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:id="@+id/button8"
-            android:text="@string/button8"/>
+            android:text="@string/button8"
+            android:onClick="onClickNumber"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:id="@+id/button9"
-            android:text="@string/button9"/>
+            android:text="@string/button9"
+            android:onClick="onClickNumber"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:id="@+id/div"
-            android:text="@string/div"/>
+            android:text="@string/div"
+            android:onClick="onClickOperation"/>
         </TableRow>
 
 
@@ -70,29 +71,31 @@ f
             android:layout_height="0dp"
             android:layout_weight="1">
 
-        <Button
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="@string/button4"
+                android:onClick="onClickNumber"
+                android:id="@+id/button" />
+
+            <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:id="@+id/button4"
-            android:text="@string/button4"/>
+            android:text="@string/button5"
+            android:onClick="onClickNumber"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:id="@+id/button5"
-            android:text="@string/button5"/>
-
-        <Button
-            android:layout_height="match_parent"
-            android:layout_width="wrap_content"
-            android:id="@+id/button6"
-            android:text="@string/button6"/>
+            android:text="@string/button6"
+            android:onClick="onClickNumber"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:id="@+id/mul"
-            android:text="@string/mul"/>
+            android:text="@string/mul"
+            android:onClick="onClickOperation"/>
         </TableRow>
 
         <TableRow
@@ -102,26 +105,27 @@ f
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:id="@+id/button1"
-            android:text="@string/button1"/>
+            android:text="@string/button1"
+            android:onClick="onClickNumber"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:id="@+id/button2"
-            android:text="@string/button2"/>
+            android:text="@string/button2"
+            android:onClick="onClickNumber"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:id="@+id/button3"
-            android:text="@string/button3"/>
+            android:text="@string/button3"
+            android:onClick="onClickNumber"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:id="@+id/puls"
-            android:text="@string/puls"/>
+            android:text="@string/puls"
+            android:onClick="onClickOperation"/>
         </TableRow>
 
         <TableRow
@@ -132,24 +136,29 @@ f
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:id="@+id/delete"
-            android:text="@string/delete"/>
+            android:text="@string/delete"
+            android:onClick="onClickOperation"
+            />
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:id="@+id/button0"
-            android:text="@string/button0"/>
+            android:text="@string/button0"
+            android:onClick="onClickNumber"/>
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:id="@+id/minus"
-            android:text="@string/minus"/>
+            android:text="@string/minus"
+            android:onClick="onClickOperation"/>
+
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:id="@+id/equal"
-            android:text="@string/equal"/>
+            android:text="@string/equal"
+            android:onClick="onClickYaIndys"/>
         </TableRow>
     </TableLayout>
 </LinearLayout>
