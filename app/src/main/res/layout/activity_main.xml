@@ -6,17 +6,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.calc.MainActivity"
-    android:background="@android:color/background_dark">
+    android:background="@android:color/background_dark"
+    tools:targetApi="lollipop">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100sp"
         android:orientation="vertical"
         android:gravity="end">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
+            android:textSize="25sp"
             android:id="@+id/first_number_tv"
             android:textColor="#FFFFFF"/>
 
@@ -24,6 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
+            android:textSize="25sp"
             android:id="@+id/operation_tv"
             android:textColor="#22FF3F"/>
 
@@ -31,6 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
+            android:textSize="25sp"
             android:id="@+id/second_number_tv"
             android:textColor="#FFFFFF"/>
 
@@ -153,40 +157,74 @@
             android:layout_height="0dp"
             android:layout_weight="1">
 
-        <Button
-            android:layout_height="match_parent"
-            android:layout_width="wrap_content"
-            android:id="@+id/delete"
-            android:text="@string/delete"
-            android:onClick="onClickOperation"
-            android:textSize="25sp"
-            android:backgroundTint="#22FF3F"/>
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:textSize="40sp"
+                android:text="@string/duble0"
+                android:onClick="onClickNumber"
+                />
 
-        <Button
-            android:layout_height="match_parent"
-            android:layout_width="wrap_content"
-            android:text="@string/button0"
-            android:onClick="onClickNumber"
-            android:textSize="40sp"/>
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="@string/button0"
+                android:onClick="onClickNumber"
+                android:textSize="40sp"/>
 
-        <Button
-            android:layout_height="match_parent"
-            android:layout_width="wrap_content"
-            android:id="@+id/minus"
-            android:text="@string/minus"
-            android:onClick="onClickOperation"
-            android:textSize="40sp"
-            android:backgroundTint="#22FF3F"/>
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:id="@+id/point"
+                android:text="@string/point"
+                android:onClick="onClickNumber"
+                android:textSize="40sp"
+                android:backgroundTint="#22FF3F"/>
 
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:id="@+id/minus"
+                android:text="@string/minus"
+                android:onClick="onClickOperation"
+                android:textSize="40sp"
+                android:backgroundTint="#22FF3F"/>
 
-        <Button
-            android:layout_height="match_parent"
-            android:layout_width="wrap_content"
-            android:id="@+id/equal"
-            android:text="@string/equal"
-            android:onClick="onClickYaIndys"
-            android:textSize="40sp"
-            android:backgroundTint="#22FF3F"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:id="@+id/deleteAllText"
+                android:backgroundTint="#FF0000"
+                android:text="@string/ac"
+                android:textSize="30sp"
+                android:layout_span="2"
+                android:onClick="onClickOperation"
+                />
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:id="@+id/delete"
+                android:text="@string/delete"
+                android:onClick="onClickOperation"
+                android:textSize="30sp"
+                android:backgroundTint="#F00"/>
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:id="@+id/equal"
+                android:text="@string/equal"
+                android:onClick="onClickYaIndys"
+                android:textSize="40sp"
+                android:backgroundTint="#FF0000"/>
 
         </TableRow>
     </TableLayout>

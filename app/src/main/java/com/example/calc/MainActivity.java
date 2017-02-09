@@ -1,5 +1,11 @@
 package com.example.calc;
 
+/**
+ * пишет АС когда удаляет всё
+ * дальше начинает писать со второй вьюхи, а не с первой
+ * точки в начале строки и в конце
+ */
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -50,10 +56,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickOperation(View v) {
-
-
-
-        if (v.getId()== R.id.delete){
+        if (v.getId() == R.id.deleteAllText){
+            mFirstNumberTv.setText("");
+            mSecondNumberTv.setText("");
+            mOperationTv.setText("");
+        }
+        if (v.getId() == R.id.delete){
 
             String curValue;
 
@@ -79,10 +87,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public int operationResult (String firstNumber,String secondNumber, String operation){
-        int first = Integer.valueOf(firstNumber);
-        int second = Integer.valueOf(secondNumber);
-        int result = 0;
+    public float operationResult (String firstNumber,String secondNumber, String operation){
+        float first = Float.valueOf(firstNumber);
+        float second = Float.valueOf(secondNumber);
+        float result = 0;
         final String ADD_SYMBOL = "+";
         final String MIN_SYMBOL = "-";
         final String DIV_SYMBOL = "/";
@@ -98,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
             case DIV_SYMBOL:
                 if(second == 0) {
                     Toast.makeText(this, "IDIOT CAN`T Divided by 0",Toast.LENGTH_LONG).show();
+                    result = first;
                     break;
                 } else {
                     result = first / second;
@@ -115,12 +124,11 @@ public class MainActivity extends AppCompatActivity {
         if(mFirstNumberTv.length() != 0){
             if(mSecondNumberTv.length() != 0){
 
-            int result = operationResult(mFirstNumberTv.getText().toString(),
+            float result = operationResult(mFirstNumberTv.getText().toString(),
                     mSecondNumberTv.getText().toString(), mOperationTv.getText().toString());
             mFirstNumberTv.setText(String.valueOf(result));
             mSecondNumberTv.setText("");
             mOperationTv.setText("");
-            chosenTextView = false;
             }
         } else {
             Toast.makeText(this, "EBALO NA NOL`", Toast.LENGTH_SHORT).show();

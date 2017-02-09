@@ -16,5 +16,8 @@
     <string name="minus">-</string>
     <string name="equal">=</string>
     <string name="mul">*</string>
+    <string name="point">.</string>
+    <string name="ac">AC</string>
+    <string name="duble0">00</string>
 
 </resources>
