@@ -96,8 +96,13 @@ public class MainActivity extends AppCompatActivity {
                 result = first - second;
                 break;
             case DIV_SYMBOL:
-                result = first / second;
-                break;
+                if(second == 0) {
+                    Toast.makeText(this, "IDIOT CAN`T Divided by 0",Toast.LENGTH_LONG).show();
+                    break;
+                } else {
+                    result = first / second;
+                    break;
+                }
             case MUL_SYMBOL:
                 result = first * second;
                 break;
@@ -106,12 +111,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickYaIndys(View view) {
-        int result = operationResult(mFirstNumberTv.getText().toString(),
-                mSecondNumberTv.getText().toString(),mOperationTv.getText().toString());
-        mFirstNumberTv.setText(String.valueOf(result));
-        mSecondNumberTv.setText("");
-        mOperationTv.setText("");
-        chosenTextView = false;
 
+        if(mFirstNumberTv.length() != 0){
+            if(mSecondNumberTv.length() != 0){
+
+            int result = operationResult(mFirstNumberTv.getText().toString(),
+                    mSecondNumberTv.getText().toString(), mOperationTv.getText().toString());
+            mFirstNumberTv.setText(String.valueOf(result));
+            mSecondNumberTv.setText("");
+            mOperationTv.setText("");
+            chosenTextView = false;
+            }
+        } else {
+            Toast.makeText(this, "EBALO NA NOL`", Toast.LENGTH_SHORT).show();
+        }
     }
 }

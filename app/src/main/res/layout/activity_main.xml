@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.calc.MainActivity">
+    tools:context="com.example.calc.MainActivity"
+    android:background="@android:color/background_dark">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,19 +17,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:id="@+id/first_number_tv"/>
+            android:id="@+id/first_number_tv"
+            android:textColor="#FFFFFF"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:id="@+id/operation_tv"/>
+            android:id="@+id/operation_tv"
+            android:textColor="#22FF3F"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
-            android:id="@+id/second_number_tv"/>
+            android:id="@+id/second_number_tv"
+            android:textColor="#FFFFFF"/>
 
     </LinearLayout>
 
@@ -44,26 +48,33 @@
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:text="@string/button7"
-            android:onClick="onClickNumber"/>
+            android:onClick="onClickNumber"
+            android:textSize="40sp"
+            />
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:text="@string/button8"
-            android:onClick="onClickNumber"/>
+            android:onClick="onClickNumber"
+            android:textSize="40sp"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:text="@string/button9"
-            android:onClick="onClickNumber"/>
+            android:onClick="onClickNumber"
+            android:textSize="40sp"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:id="@+id/div"
             android:text="@string/div"
-            android:onClick="onClickOperation"/>
+            android:onClick="onClickOperation"
+            android:textSize="40sp"
+            android:backgroundTint="#22FF3F" />
+
         </TableRow>
 
 
@@ -76,26 +87,31 @@
                 android:layout_width="wrap_content"
                 android:text="@string/button4"
                 android:onClick="onClickNumber"
-                android:id="@+id/button" />
+                android:id="@+id/button"
+                android:textSize="40sp"/>
 
             <Button
-            android:layout_height="match_parent"
-            android:layout_width="wrap_content"
-            android:text="@string/button5"
-            android:onClick="onClickNumber"/>
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="@string/button5"
+                android:onClick="onClickNumber"
+                android:textSize="40sp"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:text="@string/button6"
-            android:onClick="onClickNumber"/>
+            android:onClick="onClickNumber"
+            android:textSize="40sp"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:id="@+id/mul"
             android:text="@string/mul"
-            android:onClick="onClickOperation"/>
+            android:onClick="onClickOperation"
+            android:textSize="40sp"
+            android:backgroundTint="#22FF3F"/>
         </TableRow>
 
         <TableRow
@@ -106,26 +122,31 @@
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:text="@string/button1"
-            android:onClick="onClickNumber"/>
+            android:onClick="onClickNumber"
+            android:textSize="40sp"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:text="@string/button2"
-            android:onClick="onClickNumber"/>
+            android:onClick="onClickNumber"
+            android:textSize="40sp"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:text="@string/button3"
-            android:onClick="onClickNumber"/>
+            android:onClick="onClickNumber"
+            android:textSize="40sp"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:id="@+id/puls"
             android:text="@string/puls"
-            android:onClick="onClickOperation"/>
+            android:onClick="onClickOperation"
+            android:textSize="40sp"
+            android:backgroundTint="#22FF3F"/>
         </TableRow>
 
         <TableRow
@@ -138,19 +159,24 @@
             android:id="@+id/delete"
             android:text="@string/delete"
             android:onClick="onClickOperation"
-            />
+            android:textSize="25sp"
+            android:backgroundTint="#22FF3F"/>
 
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:text="@string/button0"
-            android:onClick="onClickNumber"/>
+            android:onClick="onClickNumber"
+            android:textSize="40sp"/>
+
         <Button
             android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:id="@+id/minus"
             android:text="@string/minus"
-            android:onClick="onClickOperation"/>
+            android:onClick="onClickOperation"
+            android:textSize="40sp"
+            android:backgroundTint="#22FF3F"/>
 
 
         <Button
@@ -158,7 +184,10 @@
             android:layout_width="wrap_content"
             android:id="@+id/equal"
             android:text="@string/equal"
-            android:onClick="onClickYaIndys"/>
+            android:onClick="onClickYaIndys"
+            android:textSize="40sp"
+            android:backgroundTint="#22FF3F"/>
+
         </TableRow>
     </TableLayout>
 </LinearLayout>
